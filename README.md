@@ -1,18 +1,18 @@
 # subpa
-subpa.cc web srv dev repo
+subpa.cc web srv dev repo <br>
 
-set
-mac mini / ubuntu server / apache / php / mariaDB /
+<p><b>set</b><br>
+mac mini / ubuntu server / apache / php / mariaDB / </P>
 
-route
-/var/www/html/
+<p><b>route</b><br>
+/var/www/html/ </P>
 
-installed gnuBoard index
-./
+<P><b>installed gnuBoard index</b><br>
+./ </P>
 
-Domain
-http://subpa.cc
+<P><b>Domain</b><br>
+http://subpa.cc </P>
 
-actual service dir
-./noti/index.php
+<P><b>actual service dir</b><br>
+./noti/index.php </P>
 

@@ -2,21 +2,33 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  font-family: "GmarketSansLight";
 }
 
-.bodyWrap {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+h1 {
+  font-family: "GmarketSansMedium";
+  font-size: 2.5em;
+  margin-bottom: 0em;
+}
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 0em;
+}
+h5 {
+  font-size: 0.8em;
+  color: rgba(0, 0, 0, 0.5);
+}
+hr {
+  border-color: rgba(0, 0, 0, 0.5);
+  margin: 0;
+  border-width: 0.5px;
 }
 
 .navBar {
   width: 100%;
   height: 48px;
   border-bottom: #8080805c solid 0.2pt;
-  z-index: 98;
+  z-index: 5;
   position: fixed;
   background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(20px);
@@ -50,156 +62,63 @@ body {
   }
 }
 
-.titleBlock {
-  padding-top: 30px;
-  padding-bottom: 20px;
-  width: 700px;
-  height: 115px;
-  border-bottom: 0.5px solid black;
-}
-
-.titleBlock .title {
-  font-family: "GmarketSansMedium";
-  font-size: 34pt;
-}
-
-.titleBlock .subTitle {
-  font-family: "GmarketSansLight";
-  font-size: 16pt;
-  padding-top: 10px;
-}
-
-.contentsBlock {
-  padding-top: 30px;
-  padding-bottom: 20px;
-  width: 700px;
-  height: auto;
-  border-bottom: 0.5px solid black;
-}
-
-.contentsBlock ::-webkit-scrollbar {
-  display: none;
-}
-
-.contentsBlock .blockTitle {
-  font-family: "GmarketSansLight";
-  font-size: 16pt;
-}
-
-.blockSlide,
-.blockSlide2,
-.blockSlide3 {
-  /* overflow-x: auto; */
-  white-space: nowrap;
-  padding-top: 20px;
-  padding-bottom: 10px;
-}
-
-.cardSquare {
-  display: inline-block;
-  width: 130px;
-  height: 130px;
-  border: 0.5px solid black;
-  border-radius: 16pt;
-}
-
-.cardSquare + .cardSquare {
-  margin-left: 10px;
-}
-
-.cardText {
-  width: inherit;
-  height: inherit;
-  color: black;
-  font-family: "GmarketSansLight";
-  font-size: 14pt;
-  text-align: center;
-  line-height: 98pt;
-}
-
-.cardSquare:hover {
-  cursor: pointer;
-  border: 0.5px solid rgb(180, 180, 180);
-  background-color: hotpink;
-}
-
-.cardRactangle:hover {
-  cursor: pointer;
-  border: 0.5px solid rgb(180, 180, 180);
-  background-color: hotpink;
-}
-
-.cardRactangle {
-  display: inline-block;
-  width: 300px;
-  height: 130px;
-  border: 0.5px solid black;
-  border-radius: 16pt;
-}
-
-.cardTitle {
-  padding: 15px 20px;
-  width: 200px;
-  height: 16pt;
-  color: black;
-  font-family: "GmarketSansLight";
-  font-size: 16pt;
-}
-
-.cardSubTitle {
-  padding: 15px 20px;
-  width: 85%;
-  height: 16pt;
+.content {
   display: flex;
-  color: black;
-  font-family: "GmarketSansLight";
-  font-size: 12pt;
-  text-align: left;
-  justify-content: space-between;
+  flex-direction: column;
+  z-index: 4;
+  margin: auto;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-top: 50px;
 }
 
-.blank {
-  padding-top: 30px;
+.profileAllow {
+  margin: 25px;
+  padding: 10px;
+  width: 80%;
+  max-width: 450px;
+  height: 56vw;
+  max-height: 360px;
+  z-index: 0;
+  position: relative;
+  left: 0px;
+  top: 0px;
+  background-color: #b2c7da;
+  border-radius: 2em;
+  display: grid;
+  grid-template-columns: 2fr 3fr 2fr;
+  align-items: center;
+  justify-items: center;
+  transform: perspective(500px) rotateY(5deg);
+  box-shadow: 2px 3px 10px 2px rgba(128, 128, 128, 0.25);
 }
 
-.cardRactangle + .cardRactangle {
-  margin-left: 10px;
+.profilePic {
+  margin: 5px;
+  background-color: lightgray;
+  width: 15vw;
+  max-width: 100px;
+  height: 15vw;
+  max-height: 100px;
+  border-radius: 1.4em;
+  overflow: hidden;
 }
 
-@media screen and (max-width: 767px) {
-  .bodyWrap {
-    width: 100vw;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.nicknamed {
+  display: flex;
+  align-items: center;
+  padding-top: 0;
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+}
 
-  .contentsFlex {
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.allowYn {
+  display: flex;
+  align-items: center;
+}
 
-  .titleBlock {
-    padding-top: 30px;
-    padding-bottom: 20px;
-    width: 89%;
-  }
-
-  .contentsBlock {
-    padding-top: 30px;
-    padding-bottom: 20px;
-    width: 89%;
-  }
-
-  .blockSlide,
-  .blockSlide2,
-  .blockSlide3 {
-    overflow-x: scroll;
-    white-space: nowrap;
-    padding-top: 20px;
-    padding-bottom: 10px;
-  }
+.divInImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

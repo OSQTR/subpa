@@ -19,15 +19,15 @@ b {
 
 @keyframes tada {
   0% {
-    font-size: 1em;
-  }
-
-  50% {
     font-size: 1.1em;
   }
 
+  50% {
+    font-size: 1.3em;
+  }
+
   100% {
-    font-size: 1em;
+    font-size: 1.1em;
   }
 }
 

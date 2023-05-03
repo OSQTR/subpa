@@ -8,7 +8,8 @@ window.addEventListener("scroll", function () {
   element.style.left = 30 - cnt * -1 + "px";
   element.style.top = 30 - cnt * -1 + "px";
 
-  console.log(value);
+  //스크롤 위치
+  // console.log(value);
 
   if (value > 200) {
     document.getElementsByClassName("navBar")[0].style.display = "block";

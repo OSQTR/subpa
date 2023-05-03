@@ -165,7 +165,7 @@ p {
   transform: perspective(500px) rotateY(0deg);
 }
 
-.pageBtn1 {
+.pageBtn {
   cursor: pointer;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -187,4 +187,10 @@ p {
   margin-bottom: 40px;
   text-align: center;
   font-size: 0.7em;
+}
+
+.footer img {
+  margin: auto;
+  width: 200px;
+  height: auto;
 }

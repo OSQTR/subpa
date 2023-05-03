@@ -30,7 +30,7 @@ window.addEventListener("scroll", function () {
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
-      if (entry.intersectionRatio > 0.5 && entry.intersectionRatio < 1) {
+      if (entry.intersectionRatio > 0) {
         entry.target.classList.add("tada");
       }
       // 그 외의 경우 'tada' 클래스 제거

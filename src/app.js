@@ -27,6 +27,22 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// window.addEventListener('scroll', ()=>{
-//     document.getElementsByClassName("navBar")[0].style.display = "block";
-// });
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.intersectionRatio > 0.5 && entry.intersectionRatio < 1) {
+        entry.target.classList.add("tada");
+      }
+      // 그 외의 경우 'tada' 클래스 제거
+      else {
+        entry.target.classList.remove("tada");
+      }
+    });
+  },
+  { threshold: [0.5] }
+);
+
+const targetEl = document.querySelectorAll("b");
+targetEl.forEach((el) => {
+  observer.observe(el);
+});
